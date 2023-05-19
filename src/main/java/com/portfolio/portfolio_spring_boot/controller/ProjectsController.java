@@ -31,5 +31,10 @@ public class ProjectsController {
         return ResponseEntity.noContent().build();
     }
 
+    @DeleteMapping("projects/{id}")
+    public void delete(@PathVariable Long id){
+        projectsModelService.delete(id);
+    }
+
 
 }
